@@ -1,0 +1,423 @@
+/* ===========================
+   Google Font
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#2b1d18,#5a3d2f,#8b5e3c);
+    color:#f8f4ef;
+}
+
+/* ===========================
+        NAVBAR
+=========================== */
+
+.navbar{
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(43,29,24,.95);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 5px 25px rgba(0,0,0,.35);
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+    color:#f3d2a2;
+    letter-spacing:1px;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.nav-links li a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    transition:.3s;
+    position:relative;
+}
+
+.nav-links li a:hover{
+    color:#f3d2a2;
+}
+
+.nav-links li a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:2px;
+    background:#f3d2a2;
+    transition:.3s;
+}
+
+.nav-links li a:hover::after{
+    width:100%;
+}
+
+/* ===========================
+        HERO
+=========================== */
+
+.hero{
+    width:100%;
+    padding:90px 10%;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+    color:#f7d7b3;
+}
+
+.hero p{
+    font-size:20px;
+    color:#e8d8cb;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* ===========================
+      CARD SECTION
+=========================== */
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    flex-wrap:wrap;
+    padding:30px 8% 80px;
+}
+
+.card{
+    width:360px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(14px);
+    border-radius:25px;
+    padding:40px;
+    text-align:center;
+    transition:.35s;
+    box-shadow:0 12px 35px rgba(0,0,0,.35);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.45);
+}
+
+.card h2{
+    font-size:30px;
+    margin-bottom:20px;
+    color:#f3d2a2;
+}
+
+.card p{
+    color:#f1ebe5;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+/* ===========================
+        BUTTON
+=========================== */
+
+.button{
+    display:inline-block;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:50px;
+    background:#8b5e3c;
+    color:white;
+    font-weight:600;
+    transition:.3s;
+}
+
+.button:hover{
+    background:#6d472e;
+    transform:scale(1.05);
+}
+
+/* ===========================
+        FOOTER
+=========================== */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#2b1d18;
+    color:#e8d8cb;
+    margin-top:70px;
+}
+
+/* ===========================
+      COMMON SECTION
+=========================== */
+
+.section-title{
+    text-align:center;
+    font-size:45px;
+    margin-top:60px;
+    color:#f3d2a2;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ===========================
+      RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+    .navbar{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .nav-links{
+        flex-direction:column;
+        align-items:center;
+        gap:18px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .cards{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .card{
+        width:90%;
+    }
+    /* ==========================================
+            FORM CONTAINER
+========================================== */
+
+    .form-container{
+        width:90%;
+        max-width:850px;
+        margin:60px auto;
+        background:rgba(255,255,255,.08);
+        backdrop-filter:blur(15px);
+        padding:45px;
+        border-radius:25px;
+        box-shadow:0 15px 40px rgba(0,0,0,.35);
+    }
+
+    .form-container h1{
+        text-align:center;
+        color:#f3d2a2;
+        margin-bottom:35px;
+        font-size:40px;
+    }
+
+    .form-group{
+        margin-bottom:25px;
+    }
+
+    .form-group label{
+        display:block;
+        margin-bottom:10px;
+        font-weight:600;
+        color:#f5ede3;
+    }
+
+    input,
+    select,
+    textarea{
+        width:100%;
+        padding:15px;
+        border:none;
+        border-radius:12px;
+        outline:none;
+        background:rgba(255,255,255,.12);
+        color:white;
+        font-size:16px;
+    }
+
+    input::placeholder,
+    textarea::placeholder{
+        color:#ddd;
+    }
+
+    select{
+        color:white;
+    }
+
+    option{
+        color:black;
+    }
+
+    textarea{
+        resize:none;
+        min-height:140px;
+    }
+
+    .submit-btn{
+        width:100%;
+        padding:16px;
+        border:none;
+        border-radius:15px;
+        background:#8b5e3c;
+        color:white;
+        font-size:18px;
+        cursor:pointer;
+        transition:.3s;
+    }
+
+    .submit-btn:hover{
+        background:#6d472e;
+        transform:translateY(-3px);
+    }
+
+    /* ==========================================
+                JOB CARDS
+    ========================================== */
+
+    .jobs-container{
+        width:90%;
+        max-width:1200px;
+        margin:50px auto;
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+        gap:30px;
+    }
+
+    .job-card{
+        background:rgba(255,255,255,.08);
+        backdrop-filter:blur(12px);
+        border-radius:20px;
+        padding:30px;
+        transition:.3s;
+        box-shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+
+    .job-card:hover{
+        transform:translateY(-8px);
+    }
+
+    .job-card h2{
+        color:#f3d2a2;
+        margin-bottom:18px;
+    }
+
+    .job-card p{
+        margin:10px 0;
+        line-height:1.7;
+    }
+
+    .skills{
+        display:flex;
+        flex-wrap:wrap;
+        gap:10px;
+        margin-top:20px;
+    }
+
+    .skill{
+        background:#8b5e3c;
+        color:white;
+        padding:8px 15px;
+        border-radius:30px;
+        font-size:14px;
+    }
+
+    /* ==========================================
+                SUCCESS PAGE
+    ========================================== */
+
+    .success-box{
+        width:90%;
+        max-width:700px;
+        margin:100px auto;
+        background:rgba(255,255,255,.08);
+        backdrop-filter:blur(15px);
+        border-radius:25px;
+        padding:60px;
+        text-align:center;
+        box-shadow:0 15px 40px rgba(0,0,0,.35);
+    }
+
+    .success-box h1{
+        color:#7CFC98;
+        margin-bottom:20px;
+        font-size:45px;
+    }
+
+    .success-box p{
+        font-size:20px;
+        margin-bottom:35px;
+    }
+
+    .home-btn{
+        display:inline-block;
+        text-decoration:none;
+        background:#8b5e3c;
+        color:white;
+        padding:15px 35px;
+        border-radius:40px;
+        transition:.3s;
+    }
+
+    .home-btn:hover{
+        background:#6d472e;
+    }
+
+    /* ==========================================
+                TABLE
+    ========================================== */
+
+    table{
+        width:100%;
+        border-collapse:collapse;
+        margin-top:25px;
+    }
+
+    th{
+        background:#8b5e3c;
+        padding:15px;
+    }
+
+    td{
+        padding:15px;
+        border-bottom:1px solid rgba(255,255,255,.15);
+        text-align:center;
+    }
+
+    tr:hover{
+        background:rgba(255,255,255,.06);
+    }
+}

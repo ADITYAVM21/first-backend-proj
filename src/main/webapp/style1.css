@@ -1,0 +1,31 @@
+body {
+    background-color: #e6d2b5;
+}
+
+.oval-box-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.oval-box {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #8b5e3c;
+    border-radius: 50%;
+    color: #f8f4ef;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.oval-box:hover {
+    background-color: #6f4a30;
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(111, 74, 48, 0.35);
+}
